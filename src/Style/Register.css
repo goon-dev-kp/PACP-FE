@@ -1,0 +1,257 @@
+/* Register.css */
+.container-register {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tiêu đề form */
+.register-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-icon {
+  margin-right: 10px;
+}
+
+/* Nhóm radio buttons */
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.radio-label {
+  display: inline-block;
+  background-color: #e9ecef; /* Màu nền mặc định */
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Hiệu ứng mượt cho tất cả thay đổi */
+  text-align: center;
+  min-width: 160px; /* Đảm bảo hai nút có kích thước đồng đều */
+  border: 2px solid transparent; /* Viền mặc định trong suốt */
+  position: relative; /* Để thêm hiệu ứng pseudo-element nếu cần */
+}
+
+.radio-label:hover {
+  background-color: #d3d9df; /* Màu xám đậm hơn khi hover */
+  transform: translateY(-2px); /* Nâng nhẹ khi hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ khi hover */
+}
+
+.radio-input {
+  display: none; /* Ẩn radio button thực tế */
+}
+
+/* Khi radio được chọn */
+.radio-input:checked + .radio-label {
+  background-color: #dc3545; /* Màu đỏ khi được chọn */
+  color: #fff; /* Chữ trắng */
+  border: 2px solid #b02a37; /* Viền đỏ đậm để nhấn mạnh */
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3); /* Bóng đỏ khi chọn */
+  transform: scale(1.05); /* Phóng to nhẹ khi chọn */
+}
+
+/* Container cho các trường nhập liệu */
+.fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fields-container.hidden {
+  display: none; /* Ẩn các trường không được chọn */
+}
+
+/* Nhóm form-group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4c2885;
+  margin-bottom: 6px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-field,
+.input-wrapper .input-field {
+  width: 100%;
+  padding: 11px 40px 11px 12px; /* Đủ chỗ cho icon mắt */
+  font-size: 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 7px;
+  outline: none;
+  background: #f7fafc;
+  color: #222;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: #8933c2;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(137, 51, 194, 0.13);
+}
+
+.input-field:disabled,
+.input-field[readonly] {
+  background: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #b0b7c3;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  height: 100%;
+  z-index: 2;
+  /* Xóa hiệu ứng chuyển động */
+  transition: none;
+}
+
+.eye-icon:hover,
+.eye-icon:active {
+  color: #b0b7c3;
+  transform: translateY(-50%);
+}
+
+/* Trường nhập ngày */
+.date-input {
+  padding: 8px;
+}
+
+/* Nút submit */
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto 0; /* Căn giữa */
+  display: block;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Nâng nhẹ khi hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ khi hover */
+}
+
+.submit-button:active {
+  background-color: #004085;
+  transform: translateY(0); /* Trở về vị trí ban đầu khi nhấn */
+}
+
+/* Footer text */
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.footer-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container-register {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .register-title {
+    font-size: 20px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .radio-label {
+    min-width: unset; /* Bỏ giới hạn chiều rộng trên mobile */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .radio-input:checked + .radio-label {
+    transform: scale(1); /* Bỏ phóng to trên mobile để tránh tràn */
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .input-field,
+  .input-wrapper .input-field {
+    font-size: 0.97rem;
+    padding: 9px 36px 9px 10px;
+  }
+  .eye-icon {
+    font-size: 1.05rem;
+    right: 8px;
+  }
+}
+
+.input-field.error {
+  border-color: #ff4d4f !important;
+  background: #fff0f0;
+}
+
+.input-error-message {
+  color: #ff4d4f;
+  font-size: 0.92rem;
+  margin-top: 3px;
+  margin-left: 2px;
+  min-height: 18px;
+}

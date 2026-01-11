@@ -1,0 +1,220 @@
+.vendor-map-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+}
+
+.header-section {
+  background: linear-gradient(135deg, #6b3fa0 0%, #8e44ad 100%);
+  color: white;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 42px;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: 'Dongle', sans-serif;
+}
+
+.title-icon {
+  font-size: 36px;
+  color: #f9a8d4;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.map-wrapper {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 24px;
+  color: #6b3fa0;
+}
+
+.marker {
+  cursor: pointer;
+  transform: translate(-50%, -100%);
+}
+
+.marker-icon {
+  font-size: 32px;
+  color: #e91e63;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  transition: transform 0.2s;
+}
+
+.marker-icon:hover {
+  transform: scale(1.2);
+}
+
+.vendor-popup {
+  max-width: 250px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.vendor-name {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  color: #6b3fa0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vendor-info {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  color: #8e44ad;
+  min-width: 20px;
+}
+
+.vendor-list {
+  background: white;
+  padding: 30px;
+  box-shadow: 0 -2px 15px rgba(0,0,0,0.1);
+}
+
+.list-title {
+  text-align: center;
+  color: #6b3fa0;
+  margin-bottom: 25px;
+  font-family: 'Dongle', sans-serif;
+  font-size: 36px;
+}
+
+.vendor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vendor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(107, 63, 160, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid #6b3fa0;
+}
+
+.vendor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(107, 63, 160, 0.2);
+}
+
+.card-title {
+  color: #6b3fa0;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.card-address {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.card-phone {
+  margin: 5px 0;
+  color: #2196f3;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-section {
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 32px;
+  }
+  
+  .vendor-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-wrapper {
+    min-height: 300px;
+  }
+}
+
+/* Thêm vào cuối file */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.spinner-icon {
+  font-size: 48px;
+  color: #6b3fa0;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.progress-container {
+  width: 300px;
+  height: 24px;
+  background: #f0e5ff;
+  border-radius: 12px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #6b3fa0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: width 0.3s ease;
+}
+.no-vendors-message {
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #e91e63;
+  font-weight: 500;
+}
+
+

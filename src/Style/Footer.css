@@ -1,0 +1,134 @@
+.footer-section {
+  background: #febfd4; /* Nền hồng nhạt */
+  padding: 60px 0; /* Khoảng cách trên dưới */
+  color: #6b3fa0; /* Màu chữ tím đậm */
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Khoảng cách giữa các cột */
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px; /* Đảm bảo cột không quá hẹp */
+}
+
+.footer-logo {
+  font-size: 50px;
+  font-weight: 700;
+  color: #6b3fa0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-sub {
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6b3fa0;
+  margin-bottom: 15px;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #6b3fa0;
+  margin-bottom: 10px;
+}
+
+.footer-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: #6b3fa0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #6b3fa0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #5a347f; /* Tím đậm hơn khi hover */
+}
+
+.footer-fanpage {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-fb-icon {
+  font-size: 24px;
+  color: #3b5998; /* Màu xanh Facebook */
+}
+
+.fanpage-placeholder {
+  width: 120px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 40px 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px; /* Tăng gap để các cột không quá sát nhau */
+  }
+
+  .footer-column {
+    min-width: 100%; /* Cột chiếm toàn bộ chiều rộng */
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-info {
+    justify-content: center;
+  }
+
+  .footer-fanpage {
+    justify-content: center;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-container {
+    flex-wrap: wrap; /* Cho phép các cột xuống dòng */
+    gap: 20px;
+  }
+
+  .footer-column {
+    flex: 1 1 40%; /* 2 cột mỗi hàng */
+  }
+}

@@ -1,0 +1,50 @@
+/* ======= Nền tổng thể ======= */
+.homepage-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8eaff 0%, #feeef6 100%);
+  font-family: 'Dongle', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ======= Nút chính ======= */
+.main-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6b3fa0;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: 'Dongle', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(107, 63, 160, 0.08);
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.main-btn .arrow {
+  margin-left: 12px;
+  font-size: 26px;
+}
+.main-btn:hover {
+  background: #5a347f;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 1100px) {
+  .hero-container, .intro-section { flex-direction: column; gap: 30px; text-align: center; }
+  .hero-image, .intro-right { max-width: 350px; margin: 0 auto; }
+  .banner-center { width: 600px; height: 300px; }
+  .image-cat, .image-dog, .image-letter { width: 160px; height: 160px; }
+  .intro-section { padding: 40px 12px; }
+}
+@media (max-width: 700px) {
+  .hero-title { font-size: 48px; }
+  .hero-subtitle { font-size: 22px; }
+  .intro-title { font-size: 32px; }
+  .map-title { font-size: 28px; }
+  .banner-wrapper { height: 220px; border-radius: 20px; }
+  .banner-center { width: 320px; height: 120px; }
+}

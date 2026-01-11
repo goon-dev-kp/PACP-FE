@@ -1,0 +1,150 @@
+/* Login.css */
+.login-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: #f5e9f5; /* Màu nền hồng nhạt */
+  min-height: 100vh; /* Đảm bảo chiều cao tối thiểu bằng viewport */
+  display: flex; /* Sử dụng flexbox để căn giữa */
+  flex-direction: column; /* Sắp xếp các thành phần theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  margin: 0;
+  padding: 0;
+}
+
+.login-logo {
+  display: block; /* Đảm bảo logo là block để căn giữa */
+  margin-bottom: 25px; /* Tăng khoảng cách để phù hợp với logo lớn hơn */
+  height: 150px; /* Tăng kích thước logo */
+}
+
+.container-login {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: white; /* Nền trắng */
+  border-radius: 15px; /* Bo tròn container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng */
+}
+
+.title-login {
+  font-size: 24px;
+  color: #4b0082; /* Màu tím đậm */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.input-login {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Bo tròn mạnh hơn */
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-login:focus {
+  border-color: #4b0082; /* Viền tím khi focus */
+  box-shadow: 0 0 5px rgba(75, 0, 130, 0.2); /* Hiệu ứng bóng nhẹ */
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #4b0082; /* Màu tím đậm phù hợp với giao diện */
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.links-login {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.links-login a {
+  color: #4b0082; /* Màu tím đậm */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links-login a:hover {
+  color: #6a0dad; /* Tím đậm hơn khi hover */
+  text-decoration: underline;
+}
+
+.login-btn {
+  background-color: #4b0082; /* Màu tím đậm */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px; /* Bo tròn mạnh hơn */
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #6a0dad; /* Tím đậm hơn khi hover */
+}
+
+.footer-login {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #4b0082; /* Màu tím đậm */
+}
+
+.footer-login a {
+  color: #4b0082;
+  text-decoration: none;
+}
+
+.footer-login a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container-login {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .login-logo {
+    height: 60px; /* Tăng kích thước logo trên mobile */
+  }
+
+  .title-login {
+    font-size: 20px;
+  }
+
+  .input-login {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .eye-icon {
+    font-size: 1rem;
+  }
+
+  .login-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,263 @@
+/* Overlay nền xám mờ */
+.emergency-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  margin-top: 50px;
+}
+
+/* Hộp form chính */
+.emergency-modal {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+  animation: fadeInUp 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .emergency-modal {
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+}
+
+
+/* Tiêu đề lớn */
+.emergency-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Input và textarea đẹp */
+.emergency-input,
+.emergency-textarea,
+.emergency-select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.emergency-input:focus,
+.emergency-textarea:focus,
+.emergency-select:focus {
+  border-color: #dc2626;
+}
+
+/* Label nhóm */
+.emergency-label {
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+  display: block;
+  color: #374151;
+}
+
+/* Nhóm nút */
+.emergency-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Nút */
+.emergency-button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.emergency-button.cancel {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.emergency-button.cancel:hover {
+  background-color: #e5e7eb;
+}
+
+.emergency-button.send {
+  background-color: #dc2626;
+  color: white;
+}
+
+.emergency-button.send:hover {
+  background-color: #b91c1c;
+}
+
+/* Nút đóng góc trên */
+.emergency-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 1.25rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.emergency-close:hover {
+  color: #000;
+}
+
+/* Nút khẩn cấp nổi bật */
+.emergency-button-trigger {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #dc2626;
+  color: white;
+  font-weight: 800;
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  border-radius: 9999px;
+  border: 4px solid white;
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+  animation: pulse 2s infinite;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.emergency-button-trigger:hover {
+  background-color: #b91c1c;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.8);
+  }
+}
+
+/* Preview ảnh */
+.image-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.image-preview {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+  transition: background-color 0.2s;
+}
+
+.custom-file-upload:hover {
+  background-color: #e5e7eb;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.video-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.video-preview {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+
+.address-autocomplete-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.address-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 8px 8px;
+}
+
+.address-suggestion-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 14px;
+  color: #333;
+}
+
+.address-suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+
+
+.map-container {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+/* Ẩn bản đồ khi chưa có tọa độ */
+.map-container:empty {
+  display: none;
+}

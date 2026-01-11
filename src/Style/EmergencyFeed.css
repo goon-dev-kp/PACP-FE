@@ -1,0 +1,146 @@
+.emergency-feed-overlay {
+  position: fixed;
+  top: 60px; /* Đẩy xuống dưới header (giả sử header cao 50-60px) */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px); /* Giảm chiều cao để tránh bị che */
+  background-color: rgba(20, 20, 20, 0.75);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Canh lên trên để không bị che */
+  padding: 20px;
+  overflow-y: auto;
+  margin-top: 0; /* Bỏ margin-top cũ */
+}
+
+.emergency-feed-container {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 700px; /* Rộng hơn */
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  margin-top: 20px; /* Cách header một chút */
+}
+
+.feed-title {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.feed-card {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feed-image,
+.feed-video {
+  width: 100%;
+  max-height: 300px;
+  margin-top: 16px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.feed-actions {
+  display: flex;
+  justify-content: flex-end; /* Căn nút về bên phải */
+  margin-top: 20px;
+}
+
+.btn-confirm {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover {
+  background-color: #059669;
+}
+
+.btn-reject {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+.btn-reject:hover {
+  background-color: #dc2626;
+}
+
+/* Thêm các style mới cho bản đồ */
+.emergency-map-container {
+  margin: 15px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.emergency-map {
+  width: 100%;
+  height: 250px;
+}
+
+.btn-find-route {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-find-route:hover {
+  background: #3a7bc8;
+}
+
+.map-address {
+  padding: 8px;
+  background: #f5f5f5;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+/* Cập nhật card để chứa bản đồ */
+.feed-card {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.map-loading {
+  padding: 10px;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+

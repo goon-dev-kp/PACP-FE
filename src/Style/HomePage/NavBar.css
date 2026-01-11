@@ -1,0 +1,57 @@
+/* ======= Hero Section (NavBar) ======= */
+.hero-section {
+  background: #f8eaff;
+  padding: 80px 0 40px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.hero-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+}
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  margin-left: -10px;
+}
+.hero-title {
+  font-family: 'Dongle', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: #6b3fa0;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+.hero-subtitle {
+  font-family: 'Dongle', sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #febfd4;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+.hero-description {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 20px;
+  color: #6b3fa0;
+  line-height: 1.6;
+  margin-bottom: 38px;
+}
+.hero-image {
+  flex: 1;
+  max-width: 420px;
+  position: relative;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(107, 63, 160, 0.10);
+}

@@ -1,0 +1,375 @@
+.listpet-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8eaff 0%, #feeef6 100%);
+  font-family: 'Dongle', 'Segoe UI', Arial, sans-serif;
+}
+
+.listpet-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 0 60px 0;
+}
+
+/* --- Bộ lọc & tiêu đề --- */
+.pet-filter-container {
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(107, 63, 160, 0.08);
+  padding: 40px 0 30px 0;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.pet-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #6b3fa0;
+  font-family: 'Dongle', sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+.pet-button {
+  min-width: 180px;
+  height: 60px;
+  border-radius: 32px;
+  background: #febfd4;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  font-family: 'Dongle', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(107, 63, 160, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.pet-button.active,
+.pet-button:hover {
+  background: #6b3fa0;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* --- Danh sách thú cưng --- */
+.pet-container {
+  width: 100%;
+  background: #FEEFF6;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(107, 63, 160, 0.07);
+  margin: 0 auto 40px auto;
+  padding: 40px 30px 60px 30px;
+  box-sizing: border-box;
+}
+
+.pet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.pet-type {
+  font-size: 38px;
+  font-family: 'Dongle', sans-serif;
+  color: #6b3fa0;
+  margin: 0;
+}
+
+.pet-filter-dropdown {
+  width: 200px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1.5px solid #6b3fa0;
+  padding: 0 18px;
+  font-size: 18px;
+  color: #6b3fa0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s;
+}
+.pet-filter-dropdown:focus {
+  border-color: #febfd4;
+}
+
+.pet-card-wrapper {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.pet-card-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.pet-card-wrapper::-webkit-scrollbar-thumb {
+  background-color: #d6a7d9;
+  border-radius: 20px;
+}
+
+.pet-card {
+  flex: 0 0 420px;
+  min-height: 540px;
+  background: linear-gradient(120deg, #6b3fa0 70%, #febfd4 120%);
+  border-radius: 40px;
+  padding: 28px 24px 24px 24px;
+  scroll-snap-align: start;
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(107, 63, 160, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pet-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(107, 63, 160, 0.16);
+}
+
+.pet-image-container {
+  width: 100%;
+  position: relative;
+}
+
+.pet-image {
+  width: 100%;
+  height: 260px;
+  border-radius: 28px;
+  object-fit: cover;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+}
+
+.pet-favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f9a8d4;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(107, 63, 160, 0.18);
+}
+
+.pet-name {
+  font-size: 28px;
+  font-family: 'Dongle', sans-serif;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.pet-info {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  padding-left: 6px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-icon {
+  color: #FEBFD4;
+  font-size: 20px;
+}
+
+.adopt-button, .donate-button {
+  width: 90%;
+  height: 50px;
+  border-radius: 32px;
+  background: #fff;
+  color: #6b3fa0;
+  font-size: 20px;
+  font-family: 'Dongle', sans-serif;
+  font-weight: bold;
+  border: none;
+  margin: 18px auto 0;
+  display: block;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 4px 12px rgba(107, 63, 160, 0.08);
+}
+.adopt-button:hover, .donate-button:hover {
+  background: #febfd4;
+  color: #fff;
+}
+.donate-button {
+  background: #f9a8d4;
+  color: #fff;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.donate-button .donate-icon {
+  font-size: 22px;
+}
+
+.no-pets {
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-family: 'Dongle', sans-serif;
+}
+
+/* --- Popup chung (nhận nuôi, quyên góp) --- */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(6px);
+  border-radius: 24px;
+  padding: 30px 35px;
+  width: 520px;
+  max-width: 90%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.4s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #6b3fa0;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Dongle', sans-serif;
+}
+
+.popup-image {
+  width: 100%;
+  border-radius: 18px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.popup-pet-info p {
+  font-size: 17px;
+  margin: 4px 0;
+  color: #4c2885;
+}
+
+.popup-textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8eaff;
+}
+.popup-textarea:focus {
+  border-color: #6b3fa0;
+  box-shadow: 0 0 0 2px rgba(107, 63, 160, 0.2);
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.popup-cancel,
+.popup-submit {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.popup-cancel {
+  background-color: #eee;
+  color: #555;
+}
+.popup-cancel:hover {
+  background-color: #ddd;
+}
+
+.popup-submit {
+  background-color: #6b3fa0;
+  color: white;
+  box-shadow: 0 4px 12px rgba(107, 63, 160, 0.3);
+}
+.popup-submit:hover {
+  background-color: #5b3096;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .pet-card { flex: 0 0 90vw; min-width: 320px; }
+  .pet-card-wrapper { gap: 16px; }
+  .pet-container { padding: 20px 5vw 40px 5vw; }
+  .pet-title { font-size: 38px; }
+  .popup { width: 94vw; }
+}
+@media (max-width: 700px) {
+  .pet-title { font-size: 28px; }
+  .pet-type { font-size: 22px; }
+  .pet-card { min-width: 90vw; padding: 18px 8px; }
+  .pet-image { height: 120px; }
+  .pet-container { padding: 10px 2vw 20px 2vw; }
+  .pet-filter-container { padding: 18px 0 10px 0; }
+  .popup { padding: 16px 8px; }
+}

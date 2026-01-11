@@ -1,0 +1,288 @@
+/* AboutUs.css */
+.aboutus-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 12px 40px rgba(107, 63, 160, 0.15);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 100px;
+}
+
+.aboutus-header {
+  background: linear-gradient(135deg, #f0e5ff 0%, #f9f0fb 100%);
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+.aboutus-back-btn {
+  background: #fff;
+  border: 2px solid #6b3fa0;
+  color: #6b3fa0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(107, 63, 160, 0.1);
+}
+
+.aboutus-back-btn:hover {
+  background: #6b3fa0;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(107, 63, 160, 0.2);
+}
+
+.aboutus-title {
+  font-family: 'Dongle', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #6b3fa0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 1px;
+}
+
+.title-icon {
+  font-size: 42px;
+  color: #f9a8d4;
+}
+
+.aboutus-banner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.aboutus-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(107, 63, 160, 0.8), transparent);
+  padding: 40px;
+  color: white;
+}
+
+.banner-title {
+  font-family: 'Dongle', sans-serif;
+  font-size: 64px;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+.banner-subtitle {
+  font-size: 24px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.aboutus-content {
+  padding: 40px;
+  background: #fcfaff;
+  color: #4a4a4a;
+}
+
+.mission-section {
+  margin-bottom: 40px;
+}
+
+.mission-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Dongle', sans-serif;
+  font-size: 42px;
+  color: #6b3fa0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 30px 0;
+}
+
+.section-icon {
+  color: #f9a8d4;
+  font-size: 36px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.value-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(107, 63, 160, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+}
+
+.rescue-icon { background: #e3d6ff; color: #6b3fa0; }
+.reduce-icon { background: #ffd6e7; color: #e91e63; }
+.connect-icon { background: #d6f5ff; color: #2196f3; }
+
+.value-card h4 {
+  font-size: 22px;
+  margin: 0 0 15px 0;
+  color: #6b3fa0;
+}
+
+.value-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(107, 63, 160, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #f0e5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b3fa0;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.feature-card h4 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #6b3fa0;
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.aboutus-footer {
+  background: linear-gradient(135deg, #6b3fa0 0%, #8e44ad 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.aboutus-footer h3 {
+  font-family: 'Dongle', sans-serif;
+  font-size: 36px;
+  margin: 0 0 15px 0;
+}
+
+.aboutus-footer p {
+  margin: 5px 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .aboutus-container {
+    margin: 20px;
+    border-radius: 20px;
+  }
+  
+  .aboutus-header {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .aboutus-back-btn {
+    margin-bottom: 15px;
+  }
+  
+  .aboutus-banner {
+    height: 300px;
+  }
+  
+  .banner-overlay {
+    padding: 20px;
+  }
+  
+  .banner-title {
+    font-size: 48px;
+  }
+  
+  .banner-subtitle {
+    font-size: 18px;
+  }
+  
+  .aboutus-content {
+    padding: 20px;
+  }
+  
+  .values-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    justify-content: center;
+  }
+}
