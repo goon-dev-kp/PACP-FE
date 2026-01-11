@@ -2,7 +2,6 @@
 
 > A dedicated frontend application bridging the gap between animal rescue stations and compassionate adopters.
 
-![Project Banner](public/banner.png)
 ## 📖 Introduction
 
 **PACP (Pet Adoption Connection Platform)** is a startup project designed to digitize the pet adoption process. It serves as a centralized hub where:
