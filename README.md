@@ -1,12 +1,23 @@
-# React + Vite
+# 🐾 PACP - Pet Adoption Connection Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A dedicated frontend application bridging the gap between animal rescue stations and compassionate adopters.
 
-Currently, two official plugins are available:
+![Project Banner](public/banner.png)
+## 📖 Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**PACP (Pet Adoption Connection Platform)** is a startup project designed to digitize the pet adoption process. It serves as a centralized hub where:
+* **Rescue Stations** can manage their animals and review adoption requests.
+* **Adopters** can easily find pets, view detailed profiles, and submit adoption applications.
 
-## Expanding the ESLint configuration
+This repository (`PACP-FE`) contains the **Frontend** source code, built with **React** and **Vite**, focusing on performance and a user-friendly interface.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* **Core:** [React](https://reactjs.org/) (Vite)
+* **Language:** JavaScript
+* **Styling:** CSS
+* **Routing:** React Router DOM
+* **State Management:** Context API 
+* **HTTP Client:** Axios / Fetch API
+
+  
